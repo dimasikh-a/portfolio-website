@@ -6,7 +6,7 @@ import AboutTabs from "../AboutTabs";
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-full px-6 py-24 md:px-12">
+    <section id="about" className="w-full px-6 md:py-20 pb-5 pt-20 md:px-12">
       <motion.div {...fadeUp}></motion.div>
       <div className="mx-auto grid max-w-7xl items-start gap-20 lg:grid-cols-[1fr_1fr]">
         {/* LEFT CONTENT */}

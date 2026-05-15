@@ -38,7 +38,7 @@ const projects: Project[] = [
       "Implemented modern UI and smooth interaction",
     ],
 
-    demo: "#",
+    demo: "https://www.apjati.or.id/",
 
     github: "#",
   },
@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Managed authentication and data handling",
     ],
 
-    demo: "#",
+    demo: "https://www.latihan.io/",
 
     github: "#",
   },
@@ -82,7 +82,7 @@ const projects: Project[] = [
     "Implemented clean navigation and responsive layout",
   ],
 
-    demo: "#",
+    demo: "https://wahanaadya.co.id/",
 
     github: "#",
   },
@@ -290,15 +290,15 @@ export default function ProjectSection() {
                 <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-blue-100/50 blur-3xl"></div>
 
                 {/* Header */}
-                <div className="relative border-b border-slate-100 bg-gradient-to-br from-blue-50 to-white p-6 md:py-2 md:px-6">
+                <div className="relative border-b border-slate-100 bg-gradient-to-br from-blue-50 to-white px-6 py-4 md:py-2 md:px-6">
                   <div className="relative z-10 flex items-start justify-between gap-5">
                     {/* Left */}
                     <div>
-                      <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900">
+                      <h2 className="mt-6 md:text-4xl text-2xl font-bold tracking-tight text-slate-900">
                         {selected.title}
                       </h2>
 
-                      <p className="mt-2 max-w-2xl text-[15px] leading-7 text-slate-500">
+                      <p className="mt-2 max-w-2xl md:text-[15px] text-[13px] leading-7 text-slate-500">
                         {selected.desc}
                       </p>
                     </div>
@@ -306,7 +306,7 @@ export default function ProjectSection() {
                     {/* Close */}
                     <button
                       onClick={() => setSelected(null)}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/70 text-slate-400 transition hover:border-slate-300 hover:bg-white hover:text-slate-700"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70 text-slate-400 transition hover:bg-white hover:text-slate-700"
                     >
                       ✕
                     </button>
@@ -315,7 +315,7 @@ export default function ProjectSection() {
 
                 {/* Body */}
                 <div className="p-6 md:p-8">
-                  <div className="grid gap-10 md:grid-cols-2">
+                  <div className="grid md:gap-10 gap-7 md:grid-cols-2">
                     {/* Contribution */}
                     <div>
                       <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">

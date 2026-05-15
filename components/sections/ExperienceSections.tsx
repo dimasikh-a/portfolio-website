@@ -2,7 +2,7 @@
 
 export default function () {
   return (
-    <section id="experience" className="w-full bg-white px-6 py-24 md:px-12">
+    <section id="experience" className="w-ful px-6 py-24 md:px-12">
       <div className="mx-auto max-w-4xl">
         {/* Header */}
         <div className="mb-12">

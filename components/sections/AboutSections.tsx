@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="home" className="justify-center items-center flex flex-col z-10 px-4 md:px-0 h-[600px]">
+    <section id="home" className="justify-center items-center flex flex-col z-10 px-4 md:px-0 md:h-[600px] h-[650px]">
       <p className="font-jetbrains-mono text-blue-600 text-[13px] md:text-l">
         // HELLO, WORLD!
       </p>

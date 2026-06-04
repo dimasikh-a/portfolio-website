@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   {
+    label: "Home",
+    id: "home",
+  },
+  {
     label: "About",
     id: "about",
   },
@@ -22,6 +26,10 @@ const navItems = [
   {
     label: "Skill",
     id: "skill",
+  },
+  {
+    label: "contact",
+    id: "contact",
   },
 ];
 

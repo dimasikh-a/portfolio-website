@@ -3,10 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-
 import APJATI from "@/src/assets/APJATI.png";
-import latihan_io from "@/src/assets/Latihan_AI.png";
-import pt_wahana from "@/src/assets/PT_wahana.png";
+import satuklikgizi from "@/src/assets/satuklikgizi.png";
 
 type Project = {
   id: number;
@@ -17,74 +15,44 @@ type Project = {
   contributions: string[];
   demo: string;
   github: string;
+
+  status?: "Completed" | "In Development";
 };
 
 const projects: Project[] = [
   {
     id: 1,
-
     title: "APJATI Official Web",
-
+    status: "Completed",
     desc: "website for APJATI (Association of Indonesian Manpower Service Companies) focused on organizational information, publications, member services, and workforce industry insights.",
-
     image: APJATI,
-
     tech: ["Javascript", "PHP", "Tailwind CSS", "MySQL"],
-
     contributions: [
       "Designed responsive company profile interface",
       "Built publication and news section",
       "Created organization and membership pages",
       "Implemented modern UI and smooth interaction",
     ],
-
     demo: "https://www.apjati.or.id/",
-
     github: "#",
   },
   {
-    id: 2,
-
-    title: "Latihan.io Platform",
-
-    desc: "AI-powered interview simulation platform designed to help users prepare for scholarship, internship, and job interviews with personalized feedback.",
-
-    image: latihan_io,
-
-    tech: ["React.js", "Next.js", "Tailwind CSS", "PostgreSQL"],
-
+    id: 7,
+    title: "Satu Klik Gizi",
+    status: "In Development",
+    desc: "A web-based nutrition monitoring platform designed to connect healthcare workers, parents, and local communities for child growth tracking and nutrition management.",
+    tech: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS", "TypeScript"],
     contributions: [
-      "Built backend API for interview sessions",
-      "Designed database schema and user flow",
-      "Integrated AI-based interview processing",
-      "Managed authentication and data handling",
+      "Designed system architecture and database schema",
+      "Built role-based authentication and authorization",
+      "Developed dashboards for Admin, Healthcare Workers, Parents, and PKK",
+      "Implemented child growth and nutrition monitoring features",
+      "Created activity management and reporting modules",
+      "Integrated PostgreSQL database and backend APIs",
     ],
-
-    demo: "https://www.latihan.io/",
-
-    github: "#",
-  },
-  {
-    id: 3,
-
-    title: "Wahana Adya Company Profile",
-
-    desc:  "Corporate engineering consulting website focused on company profile, engineering services, project information, and organizational structure.",
-
-    image: pt_wahana,
-
-    tech: ["Javascript", "Tailwind CSS"],
-
-  contributions: [
-    "Built responsive company profile pages",
-    "Designed modern engineering service interface",
-    "Created structured organization and service sections",
-    "Implemented clean navigation and responsive layout",
-  ],
-
-    demo: "https://wahanaadya.co.id/",
-
-    github: "#",
+    image: satuklikgizi,
+    demo: "",
+    github: "",
   },
 ];
 
@@ -195,6 +163,18 @@ export default function ProjectSection() {
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
 
+                <div className="absolute left-4 top-2 z-20">
+                  <span
+                    className={`rounded-full px-3 py-1 text-[11px] font-medium ${
+                      project.status === "Completed"
+                        ? "bg-emerald-100 text-emerald-700"
+                        : "bg-red-100 text-red-500"
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent"></div>
               </div>
@@ -232,7 +212,7 @@ export default function ProjectSection() {
 
                   <button
                     onClick={() => setSelected(project)}
-                    className="rounded-full border border-slate-200 px-4 py-2 text-xs font-medium text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+                    className="rounded-full border border-slate-200 px-4 py-2 cursor-pointer text-xs font-medium text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
                   >
                     Details
                   </button>
@@ -357,13 +337,23 @@ export default function ProjectSection() {
 
                   {/* Footer */}
                   <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                    <a
-                      href={selected.demo}
-                      target="_blank"
-                      className="flex-1 rounded-2xl bg-blue-600 px-6 py-4 text-center text-sm font-medium text-white transition hover:bg-blue-700"
-                    >
-                      Live Demo ↗
-                    </a>
+                    {selected.demo ? (
+                      <a
+                        href={selected.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 rounded-2xl bg-blue-600 px-6 py-4 text-center text-sm font-medium text-white transition hover:bg-blue-700"
+                      >
+                        Live Demo ↗
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        className="flex-1 cursor-not-allowed rounded-2xl bg-slate-100 px-6 py-4 text-center text-sm font-medium text-slate-400"
+                      >
+                        Coming Soon
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>

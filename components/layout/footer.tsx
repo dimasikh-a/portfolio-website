@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200 bg-white px-6 py-20 md:px-12">
+    <footer id="contact" className="relative overflow-hidden border-t border-slate-200 bg-white px-6 py-20 md:px-12">
 
       {/* Glow */}
       <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-100/40 blur-3xl"></div>
@@ -82,7 +82,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://github.com/dimasikh-a"
                 className="group flex items-center justify-between border-b border-slate-200 pb-4 transition"
               >
                 <div className="flex items-center gap-3">

@@ -86,7 +86,7 @@ export default function AboutTabs() {
         {/* Achievement */}
         <button
           onClick={() => setActiveTab("achievement")}
-          className={`relative rounded-xl px-5 py-2.5 text-sm font-medium transition ${
+          className={`relative cursor-pointer rounded-xl px-5 py-2.5 text-sm font-medium transition ${
             activeTab === "achievement"
               ? "text-blue-600"
               : "text-slate-500 hover:text-slate-900"
@@ -110,7 +110,7 @@ export default function AboutTabs() {
         {/* Certification */}
         <button
           onClick={() => setActiveTab("certification")}
-          className={`relative rounded-xl px-5 py-2.5 text-sm font-medium transition ${
+          className={`relative rounded-xl cursor-pointer px-5 py-2.5 text-sm font-medium transition ${
             activeTab === "certification"
               ? "text-blue-600"
               : "text-slate-500 hover:text-slate-900"
@@ -261,7 +261,7 @@ export default function AboutTabs() {
                     <div className="flex shrink-0 items-center gap-3">
                       <button
                         onClick={() => setSelected(item)}
-                        className="rounded-full border border-slate-200 px-4 py-2 text-xs font-medium text-slate-600 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+                        className="rounded-full border border-slate-200 px-4 cursor-pointer py-2 text-xs font-medium text-slate-600 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
                       >
                         View Detail
                       </button>

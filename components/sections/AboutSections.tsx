@@ -59,7 +59,7 @@ export default function About() {
         {/* Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4">
  <a
-  href="mailto:dimasihsali@gmail.com?subject=Project%20Inquiry"
+  href="https://www.linkedin.com/in/dimasikhsanali/"
   className="inline-flex items-center gap-3 rounded-xl border border-blue-600 bg-blue-600 px-5 py-3 text-[12px] font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md md:px-8 md:py-4 md:text-sm"
 >
   Contact Me
